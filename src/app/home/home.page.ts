@@ -37,4 +37,5 @@ export class HomePage {
   removeItem(id: number): void {
     this.items = this.items.filter(item => item.id !== id);
   }
+
 }

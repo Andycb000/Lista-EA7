@@ -8,7 +8,7 @@
 
 <ion-content padding>
   <h2>Lista</h2>
-  <input #nameInput type="text" placeholder="Nomre" />
+  <input #nameInput type="text" placeholder="Nombre" />
   <input #dateInput type="date" />
 
   <button (click)="addItem(nameInput.value, dateInput.value); nameInput.value=''; dateInput.value=''">Agregar</button>
@@ -32,6 +32,11 @@
       <td>
         <input type="checkbox" [checked]="item.completed" />
       </td>
+
+      <td>
+        <button (click)="removeItem(item.id)">Eliminar</button>
+      </td>
+
     </tr>
   </tbody>
 </table>
